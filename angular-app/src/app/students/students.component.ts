@@ -23,10 +23,9 @@ export class StudentsComponent implements OnInit {
     try {
       const res = await this.studentService.getStudents<Json>();
       this.students = res.data;
-      console.log(this.students);
+
     } catch ( error ) {
       console.error( error );
     }
   }
-
 }

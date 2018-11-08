@@ -42,18 +42,6 @@ export class StudentService {
     }
   }*/
 
-  public async getStudent<T>(id: string): Promise<T> {
-    try {
-      const res = await axios.request<T>({
-        method: 'get',
-        url: `${this.studentUrl}/${id}?include=field_courses`
-      });
-      return res.data;
-    } catch (error) {
-      return Promise.reject(this.handleError(error));
-    }
-  }
-
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
