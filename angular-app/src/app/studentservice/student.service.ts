@@ -17,7 +17,7 @@ export class StudentService {
 
   constructor() {}
 
-  /*public async getStudents<T>(): Promise<T> {
+  public async getStudents<T>(): Promise<T> {
     try {
       const res = await axios.request<T>({
         method: 'get',
@@ -27,9 +27,9 @@ export class StudentService {
     } catch (error) {
       return Promise.reject(this.handleError(error));
     }
-  }*/
+  }
 
-  async getStudents(): Promise<Json> {
+  /*async getStudents(): Promise<Json> {
     try {
      const res = await axios.request<Json>({
        method: 'get',
@@ -40,7 +40,7 @@ export class StudentService {
     } catch (err) {
        console.log(err);
     }
-  }
+  }*/
 
   public async getStudent<T>(id: string): Promise<T> {
     try {
